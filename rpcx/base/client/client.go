@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"log"
-	"rpcx/server/api"
+	api2 "rpcx/base/server/api"
 	"time"
 
 	"github.com/smallnest/rpcx/client"
@@ -21,13 +21,13 @@ func main() {
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
-	args := &api.Args{
+	args := &api2.Args{
 		A: 10,
 		B: 20,
 	}
 
 	for {
-		reply := &api.Reply{}
+		reply := &api2.Reply{}
 		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Fatalf("failed to call: %v", err)
