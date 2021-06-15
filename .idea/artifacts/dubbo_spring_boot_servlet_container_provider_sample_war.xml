@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dubbo-spring-boot-servlet-container-provider-sample:war">
+    <output-path>$PROJECT_DIR$/dubbo/dubbo-spring-boot-project/dubbo-spring-boot-samples/servlet-container-samples/provider-sample/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dubbo-spring-boot-servlet-container-provider-sample</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+      <element id="artifact" artifact-name="dubbo-spring-boot-servlet-container-provider-sample:war exploded" />
+    </root>
+  </artifact>
+</component>
